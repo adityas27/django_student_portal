@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Learn</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,6 +20,9 @@
       <a href="{% url 'index' %}" class="brand-logo"><i class="material-icons">cloud</i>Student Portal</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons left">person</i>Profile</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{% url 'newcourse' %}"><i class="material-icons left">add</i>Add Course</a></li>
       </ul>
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons left">person</i>Profile</a></li>
@@ -54,8 +57,8 @@
     <li><div class="divider"></div></li>
     <li><a class="subheader">Learning</a></li>
     <li><a href="{% url 'categories' %}"><i class="material-icons">menu_book</i>Courses</a></li>
-    <li><a href="{% url 'inbox' %}"><i class="material-icons">inbox</i>Inbox{% if directs_count %}<span class="new badge red">{{ directs_count }}</span>{% endif %}</a></li>
-    <li><a href=""><i class="material-icons">circle_notifications</i>Notifications</a></li>
+   {% comment %} <li><a href="{% url 'inbox' %}"><i class="material-icons">inbox</i>Inbox{% if directs_count %}<span class="new badge red">{{ directs_count }}</span>{% endif %}</a></li>
+   {% endcomment %}<li><a href=""><i class="material-icons">circle_notifications</i>Notifications</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Teaching</a></li>
     <li><a href="{% url 'my-courses' %}"><i class="material-icons">menu_book</i>Your courses</a></li>
